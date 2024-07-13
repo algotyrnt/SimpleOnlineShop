@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shop</h1>
+    </header>
+    <main>
+        <div class="products">
+            <div class="product" data-id="1">
+                <img src="src/datascience.png" alt="Product 1">
+                <h2>Introduction to Python Programming</h2>
+                <p>$10.00</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2">
+                <img src="src/web.png" alt="Product 2">
+                <h2>Web Development with HTML, CSS, and JavaScript</h2>
+                <p>$15.00</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div><div class="product" data-id="3">
+                <img src="src/java.png" alt="Product 3">
+                <h2>Java Programming for Beginners</h2>
+                <p>$20.00</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4">
+                <img src="src/fullstack.png" alt="Product 4">
+                <h2>Full-Stack Web Development with MERN</h2>
+                <p>$25.00</p>
+                <button onclick="addToCart(4)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="5">
+                <img src="src/datascience.png" alt="Product 5">
+                <h2>Data Science and Machine Learning with Python</h2>
+                <p>$30.00</p>
+                <button onclick="addToCart(5)">Add to Cart</button>
+            </div>
+        </div>
+        <aside>
+            <h2>Order Summary</h2>
+            <div id="cart"></div>
+            <div id="total-price"></div>
+            <form id="checkout-form">
+                <h2>Checkout Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank-Transfer</option>
+                </select>
+                
+                <button type="submit">Complete Purchase</button>
+            </form>
+            <div id="feedback"></div>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
